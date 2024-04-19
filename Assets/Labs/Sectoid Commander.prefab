@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1828dceb6e8a1734180758c76d09c431, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.05
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1828dceb6e8a1734180758c76d09c431, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.05
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1828dceb6e8a1734180758c76d09c431, type: 3}
       propertyPath: m_LocalScale.z
@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1828dceb6e8a1734180758c76d09c431, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1828dceb6e8a1734180758c76d09c431, type: 3}
       propertyPath: m_LocalPosition.z
@@ -64,44 +64,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sectoid Commander
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1828dceb6e8a1734180758c76d09c431, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1828dceb6e8a1734180758c76d09c431, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6472393590355484009}
+      addedObject: {fileID: 5027268234852230094}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1828dceb6e8a1734180758c76d09c431, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5529823459788983167}
+      addedObject: {fileID: 6509365167552753285}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1828dceb6e8a1734180758c76d09c431, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5620167609408765503}
   m_SourcePrefab: {fileID: 100100000, guid: 1828dceb6e8a1734180758c76d09c431, type: 3}
 --- !u!1 &2764926168569231365 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1828dceb6e8a1734180758c76d09c431, type: 3}
   m_PrefabInstance: {fileID: 3071336622198687060}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &6472393590355484009
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2764926168569231365}
-  m_Material: {fileID: 13400000, guid: c6e798a0603780c4898a26076c9167b2, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5529823459788983167
+--- !u!54 &5027268234852230094
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,5 +112,46 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &6509365167552753285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764926168569231365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a21d93cad616a42b206be0967470b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyParticular: {fileID: 0}
+  maxHealth: 20
+  damage: 5
+  fireCd: 1
+  moveSpeed: 15
+  isBig: 0
+--- !u!136 &5620167609408765503
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764926168569231365}
+  m_Material: {fileID: 13400000, guid: c6e798a0603780c4898a26076c9167b2, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 15
+  m_Height: 150
+  m_Direction: 1
+  m_Center: {x: 0, y: 70, z: 0}

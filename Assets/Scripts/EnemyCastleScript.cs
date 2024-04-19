@@ -8,7 +8,9 @@ public class EnemyCastleScript : MonoBehaviour
     [SerializeField] ParticleSystem castleParticular;
     [SerializeField] TextMeshProUGUI health_text;
     [SerializeField] private TextMeshProUGUI levelCompleteText;
-    [SerializeField] private GameObject levelCompleteBackground; 
+    [SerializeField] private GameObject levelCompleteBackground;
+    [SerializeField] private GameObject nextLevelButton; 
+
 
     [SerializeField] int health = 10;
 
@@ -35,6 +37,8 @@ public class EnemyCastleScript : MonoBehaviour
                 Invoke(nameof(DestroyCastle),0.1f);
                 levelCompleteText.gameObject.SetActive(true);
                 levelCompleteBackground.SetActive(true);
+                nextLevelButton.SetActive(true); 
+
             }
         }
 
@@ -83,7 +87,7 @@ public class EnemyCastleScript : MonoBehaviour
     }
     public void getHit(int damage)
     {
-        Debug.Log("Castle hit. New health: " + health); // Debug para mostrar a vida atual
+       // Debug.Log("Castle hit. New health: " + health);
 
         health -= damage;
         CastleHitEffect();

@@ -36,7 +36,6 @@ public class EnemyController : MonoBehaviour
         startScale = transform.localScale;
     }
 
-    // Update is called once per frame
     void Update()
     {
         fireTimer -= Time.deltaTime;

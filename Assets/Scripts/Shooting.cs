@@ -18,7 +18,6 @@ public class Shooting : MonoBehaviour
         fireTimer = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         fireTimer -= Time.deltaTime;
@@ -40,7 +39,6 @@ public class Shooting : MonoBehaviour
     private void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        //bullet.GetComponent<Rigidbody>().AddForce(new Vector3(0,0,15),ForceMode.Impulse);
     }
  
 }

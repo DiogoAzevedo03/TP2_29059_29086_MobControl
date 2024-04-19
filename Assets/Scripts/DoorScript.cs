@@ -6,7 +6,6 @@ using DG.Tweening;
 
 public class DoorScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] int amount;
     [SerializeField] GameObject player;
     [SerializeField] float time;
